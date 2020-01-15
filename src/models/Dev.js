@@ -8,4 +8,4 @@ const DevSchema = new mongoose.Schema({
   techs: [String],
 });
 
-module.exporst = mongoose.model('Dev', DevSchema);
+module.exports = mongoose.model('Dev', DevSchema);
