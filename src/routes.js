@@ -8,7 +8,9 @@ routes.post('/devs', async (request, response) => {
 
   const apiResponse = await axios.get(`https://api.github.com/users/${github_username}`);
 
-  console.log(apiResponse.data);
+  const { name = login, avatar_url, bio} = apiResponse.data;
+
+  console.log(name, avatar_url, bio);
 
   return response.json({ message: 'Hello OmniStack' });
 });
