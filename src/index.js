@@ -19,7 +19,7 @@ app.use(express.json());
 // Body: request.body (Dados para ciracao ou alteracao de um registro)
 
 // MongoDB (Nao-Relacional)
-app.post('/users/:id', (request, response) => {
+app.post('/users', (request, response) => {
   console.log(request.body);
   return response.json({ message: 'Hello OmniStack' });
 });
